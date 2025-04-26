@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr"> <!-- Changed lang to "fr" -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Konan Jean</title> <!-- Title plus spécifique -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <!-- Lien vers le fichier CSS refactorisé -->
+    <link rel="stylesheet" href="style.css">
+    <!-- PAS de style inline ici -->
+</head>
+
+<body>
+
+    <!-- Header contenant la navigation -->
+    <header class="site-header">
+        <nav class="navigation container">
+            <!-- Utilisation de liens stylisés en boutons pour la navigation -->
+            <a href="#home" class="btn nav__btn active">Home</a> <!-- Ajouter 'active' pour le lien courant via JS -->
+            <a href="#about" class="btn nav__btn">About</a>
+            <a href="#service" class="btn nav__btn">Service</a>
+            <a href="#portfolio" class="btn nav__btn">Portfolio</a>
+            <a href="#contact" class="btn nav__btn">Contact</a>
+            <a href="#github" class="btn nav__btn">GitHub</a> <!-- Corrected href to match the section ID -->
+        </nav>
+    </header>
+
+    <!-- Contenu principal du site -->
+    <main>
+
+        <!-- Section Accueil -->
+        <section class="home section-padding" id="home">
+             <!-- Le background est sur la section elle-même via CSS -->
+             <div class="container text-center"> <!-- Centrer le contenu -->
+                <div class="home-content">
+                    <h3>Salut, c'est moi</h3>
+                    <h1>Konan Jean</h1>
+                    <!-- Placeholder pour texte dynamique (ex: Typed.js) -->
+                    <h3>Et je suis <span class="dynamic-text">Développeur Web Application Mobile</span></h3>
+                    <p>Passionné par la création de solutions web innovantes et performantes. Explorez mon travail et n'hésitez pas à me contacter.</p>
+
+                    <div class="social-media">
+                        <!-- Utiliser les classes CSS proposées si définies -->
+                        <a href="#" class="social-media__link" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="social-media__link" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+                        <a href="#" class="social-media__link" aria-label="Instagram"><i class='bx bxl-instagram-alt'></i></a>
+                        <a href="#" class="social-media__link" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://wa.me/+7996475 59 83" class="social-media__link" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+                            <i class='bx bxl-whatsapp'></i>
+                        </a>
+
+                        <!-- Lien Telegram ajouté -->
+                        <a href="https://t.me/@jdkonan" class="social-media__link" aria-label="Telegram" target="_blank" rel="noopener noreferrer">
+                            <i class='bx bxl-telegram'></i>
+                        </a>
+                    </div>
+
+                    <!-- Assurez-vous que le fichier CV existe -->
+                    <a href="path/to/your/cv.pdf" download class="btn home__btn-cv">Télécharger CV</a>
+                </div>
+
+                <div class="home-img">
+                    <!-- Ajouter un alt descriptif -->
+                    <img src="images/photo_2025-04-13_00-25-09.jpg" alt="Portrait de Konan Jean">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section À Propos -->
+         <section class="about section-padding" id="about">
+            <div class="container">
+                <h2 class="section__heading text-center">À Propos de <span>Moi</span></h2>
+                <div class="about-grid"> <!-- Utiliser une grille ou flexbox pour la mise en page -->
+                    <div class="about-img">
+                        <!-- Ajouter un alt descriptif -->
+                        <img src="images/photo_2025-04-13_00-31-27.jpg" alt="Konan Jean au travail">
+                    </div>
+                    <div class="about-text-content">
+                        <h3>Développeur Web, Application & Designer</h3>
+                        <p>Je suis un développeur web créatif avec une passion pour la résolution de problèmes et la conception d'expériences utilisateur intuitives. Fort de [X années] d'expérience, j'ai travaillé sur divers projets allant de sites vitrines à des applications web complexes.</p>
+                        <p>Mes compétences incluent HTML, CSS, JavaScript, [mentionner frameworks/libs comme React, Vue, Node.js, etc.], ainsi que des outils de design comme Figma ou Adobe XD. J'aime apprendre continuellement et relever de nouveaux défis techniques.</p>
+
+                        <!-- Bouton modifié -->
+                        <button id="reveal-contact-btn" class="btn">Contactez-moi</button>
+                        <!-- <a href="#contact" class="btn">Contactez-moi</a> --> <!-- Ancienne version commentée ou supprimée -->
+
+                        <!-- Conteneur caché pour les infos de contact -->
+                        <div id="revealed-contact-info" class="contact-info--hidden">
+                            <h4>Mes coordonnées :</h4>
+                            <p>
+                                <i class='bx bxs-phone'></i> <!-- Icône téléphone -->
+                                <a href="tel:+79964755983">+7 996 475 59 83</a>
+                            </p>
+                            <p>
+                                <i class='bx bxs-envelope'></i> <!-- Icône email -->
+                                <a href="mailto:konanjeanddieu@gmail.com">konanjeanddieu@gmail.com</a>
+                            </p>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Services -->
+         <section class="service section-padding" id="service">
+            <div class="container">
+                <h2 class="section__heading text-center">Mes <span>Services</span></h2>
+                <div class="service-container"> <!-- Gardé, car correspond au CSS -->
+                    <div class="service-box">
+                        <i class='bx bx-code-alt'></i>
+                        <h3>Développement Web</h3>
+                        <p>Création de sites web sur mesure, modernes, responsives et optimisés pour le SEO.</p>
+                        <a href="#contact" class="btn">En savoir plus</a>
+                    </div>
+                    <div class="service-box">
+                        <i class='bx bxs-paint'></i>
+                        <h3>Graphic Design</h3>
+                        <p>Conception d'identités visuelles, logos, maquettes web et supports de communication.</p>
+                        <a href="#contact" class="btn">En savoir plus</a>
+                    </div>
+                    <div class="service-box">
+                        <i class='bx bx-bar-chart-alt'></i>
+                        <h3>Consulting Digital</h3> <!-- Exemple -->
+                        <p>Conseils stratégiques pour améliorer votre présence en ligne et atteindre vos objectifs.</p>
+                        <a href="#contact" class="btn">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Portfolio -->
+         <section class="portfolio section-padding" id="portfolio">
+             <div class="container">
+                <h2 class="section__heading text-center">Mes Derniers <span>Projets</span></h2>
+                <div class="portfolio-container">
+                    <!-- Projet 1 -->
+                    <div class="portfolio-box">
+                        <img src="images/photo_2025-04-13_00-26-22.jpg" alt="Aperçu du projet [Nom du projet 1]">
+                        <div class="portfolio-layer">
+                            <h4>[Nom du projet 1]</h4>
+                            <p>Brève description du projet 1.</p>
+                            <a href="#" target="_blank" aria-label="Voir le projet [Nom du projet 1]"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                    <!-- Projet 2 -->
+                    <div class="portfolio-box">
+                        <img src="images/Portfolio2.png" alt="Aperçu du projet [Nom du projet 2]">
+                        <div class="portfolio-layer">
+                            <h4>[Nom du projet 2]</h4>
+                            <p>Brève description du projet 2.</p>
+                            <a href="#" target="_blank" aria-label="Voir le projet [Nom du projet 2]"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                    <!-- Ajouter les autres projets de la même manière -->
+                     <div class="portfolio-box">
+                        <img src="images/Portfolio3.png" alt="Aperçu du projet [Nom du projet 3]">
+                        <div class="portfolio-layer">
+                            <h4>[Nom du projet 3]</h4>
+                            <p>Brève description du projet 3.</p>
+                            <a href="#" target="_blank" aria-label="Voir le projet [Nom du projet 3]"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                     <div class="portfolio-box">
+                        <img src="images/Portfolio4.png" alt="Aperçu du projet [Nom du projet 4]">
+                        <div class="portfolio-layer">
+                            <h4>[Nom du projet 4]</h4>
+                            <p>Brève description du projet 4.</p>
+                            <a href="#" target="_blank" aria-label="Voir le projet [Nom du projet 4]"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                     <div class="portfolio-box">
+                        <img src="images/Portfolio5.png" alt="Aperçu du projet [Nom du projet 5]">
+                        <div class="portfolio-layer">
+                            <h4>[Nom du projet 5]</h4>
+                            <p>Brève description du projet 5.</p>
+                            <a href="#" target="_blank" aria-label="Voir le projet [Nom du projet 5]"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                     <div class="portfolio-box">
+                        <img src="images/Portfolio6.png" alt="Aperçu du projet [Nom du projet 6]">
+                        <div class="portfolio-layer">
+                            <h4>[Nom du projet 6]</h4>
+                            <p>Brève description du projet 6.</p>
+                            <a href="#" target="_blank" aria-label="Voir le projet [Nom du projet 6]"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section class="contact section-padding" id="contact">
+            <div class="container">
+                <h2 class="section__heading text-center">Contactez-<span>Moi</span></h2>
+                <form id="contact-form" action="your_server_endpoint" method="POST"> <!-- Ajouter action et method -->
+                    <div class="form-grid"> <!-- Optionnel: utiliser grid pour la disposition -->
+                        <div class="form-group">
+                            <label for="full-name">Nom Complet</label>
+                            <input type="text" id="full-name" name="fullname" class="form-input" placeholder="Votre nom complet" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email-address">Adresse Email</label>
+                            <input type="email" id="email-address" name="email" class="form-input" placeholder="Votre email" required>
+                        </div>
+                        <div class="form-group">
+                             <label for="mobile-number">Numéro de Mobile (Optionnel)</label>
+                            <input type="tel" id="mobile-number" name="phone" class="form-input" placeholder="Votre numéro de téléphone">
+                        </div>
+                         <div class="form-group">
+                            <label for="email-subject">Sujet</label>
+                            <input type="text" id="email-subject" name="subject" class="form-input" placeholder="Sujet de votre message" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Votre Message</label>
+                        <textarea id="message" name="message" cols="30" rows="7" class="form-textarea" placeholder="Écrivez votre message ici..." required></textarea>
+                    </div>
+                    <div class="text-center"> <!-- Centrer le bouton -->
+                        <button type="submit" class="btn contact__btn-submit">Envoyer le Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Section GitHub -->
+        <section class="github section-padding" id="github"> <!-- Corrected class and id -->
+            <div class="container text-center"> <!-- Added text-center -->
+                <h2 class="section__heading">Mon Profil <span>GitHub</span></h2> <!-- Added heading -->
+                <p class="github-description">
+                    Explorez mes projets, contributions et activités de développement sur GitHub.
+                    Vous y trouverez le code source de certains projets présentés dans mon portfolio et plus encore.
+                </p>
+                <!-- Link to your GitHub profile -->
+                <a href="https://github.com/YOUR_USERNAME" class="btn github__btn" target="_blank" rel="noopener noreferrer" aria-label="Voir mon profil GitHub">
+                     <!-- Replace YOUR_USERNAME with your actual GitHub username -->
+                    <i class='bx bxl-github'></i> <!-- GitHub icon -->
+                    Voir mon GitHub
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Konan Jean. Tous droits réservés.</p>
+            <!-- Optionnel: Liens sociaux ou autre contenu de footer -->
+            <div class="footer-iconTop">
+                <a href="#home" aria-label="Retour en haut de page"><i class='bx bx-up-arrow-alt'></i></a>
+            </div>
+        </div>
+    </footer>
+
+     <!-- Section Témoignages (gardé en dehors de <main> à cause de position:fixed) -->
+     <aside class="testimonials-container" aria-label="Témoignages">
+        <div class="testimonials">
+            <!-- Contenu Original -->
+            <div class="testimonial">
+                <img src="images/photo_2025-04-13_00-26-22.jpg" alt="Photo de Marie L." class="testimonial-photo">
+                <div> <!-- Wrapper pour le texte -->
+                    <p>"Konan a livré un site web exceptionnel, dépassant nos attentes."</p>
+                    <span>- Marie L., Directrice Marketing</span>
+                </div>
+            </div>
+            <div class="testimonial">
+                <img src="images/photo2.jpg" alt="Photo de Paul D." class="testimonial-photo">
+                 <div>
+                    <p>"Très professionnel et à l'écoute. Le design est superbe."</p>
+                    <span>- Paul D., Entrepreneur</span>
+                 </div>
+            </div>
+            <div class="testimonial">
+                <img src="images/photo3.jpg" alt="Photo de Claire R." class="testimonial-photo">
+                 <div>
+                    <p>"Une collaboration fluide et un résultat final très satisfaisant."</p>
+                    <span>- Claire R., Chef de Projet</span>
+                 </div>
+            </div>
+             <!-- Ajouter d'autres témoignages si nécessaire -->
+
+            <!-- === COPIE DU CONTENU pour l'animation fluide === -->
+            <div class="testimonial">
+                <img src="images/photo1.jpg" alt="Photo de Marie L." class="testimonial-photo">
+                 <div>
+                    <p>"Konan a livré un site web exceptionnel, dépassant nos attentes."</p>
+                    <span>- Marie L., Directrice Marketing</span>
+                </div>
+            </div>
+            <div class="testimonial">
+                <img src="images/photo2.jpg" alt="Photo de Paul D." class="testimonial-photo">
+                 <div>
+                    <p>"Très professionnel et à l'écoute. Le design est superbe."</p>
+                    <span>- Paul D., Entrepreneur</span>
+                 </div>
+            </div>
+            <div class="testimonial">
+                <img src="images/photo3.jpg" alt="Photo de Claire R." class="testimonial-photo">
+                 <div>
+                    <p>"Une collaboration fluide et un résultat final très satisfaisant."</p>
+                    <span>- Claire R., Chef de Projet</span>
+                 </div>
+            </div>
+             <!-- Ajouter les copies des autres témoignages -->
+        </div>
+    </aside>
+
+    <!-- Lier le fichier JavaScript (pour la navigation et autres interactions) -->
+    <script src="script.js"></script>
+</body>
+</html>
